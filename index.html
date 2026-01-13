@@ -23,9 +23,6 @@
                     <a href="#about" class="nav-link">About</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#services" class="nav-link">Services</a>
-                </li>
-                <li class="nav-item">
                     <a href="#projects" class="nav-link">Projects</a>
                 </li>
                 <li class="nav-item">
@@ -40,6 +37,12 @@
         </div>
     </nav>
 
+    <!-- Preview Mode Toggle (Desktop/Mobile) -->
+    <div class="preview-toggle" aria-label="Preview mode controls">
+        <button class="preview-btn preview-desktop active" type="button" data-mode="desktop">Desktop</button>
+        <button class="preview-btn preview-mobile" type="button" data-mode="mobile">Mobile</button>
+    </div>
+
     <!-- Home Section -->
     <section id="home" class="home">
         <div class="home-container">
@@ -49,50 +52,45 @@
                     <h1>Bhorkade Shrikar</h1>
                     <h2 class="title">And I am a Full Stack Developer</h2>
                     <p class="description">Passionate about Machine Learning, Web Development, and creating innovative solutions...</p>
-                    <div class="home-buttons">
-                        <a href="#contact" class="btn btn-primary">Hire Me</a>
-                        <a href="#projects" class="btn btn-secondary">View Work</a>
-                    </div>
+                    
                     <div class="social-buttons">
-                        <a href="https://github.com/Bhorkade" target="_blank" class="social-btn github-btn">
-                            <i class="fab fa-github"></i>
-                            <span>GitHub</span>
-                        </a>
                         <a href="https://www.linkedin.com/in/shrikar-bhorkade-81248b302" target="_blank" class="social-btn linkedin-btn">
                             <i class="fab fa-linkedin"></i>
                             <span>LinkedIn</span>
                         </a>
+                        <a href="https://drive.google.com/uc?export=download&id=1fMMBfnl_gj-EOMo8rZEymlL907QZPY8x" target="_blank" rel="noopener" class="social-btn linkedin-btn">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Resume - Bhorkade Shrikar</span>
+                        </a>
                     </div>
                 </div>
                 <div class="home-image">
-                    <div class="elegant-animation">
-                        <div class="particle-system">
-                            <div class="particle particle-1"></div>
-                            <div class="particle particle-2"></div>
-                            <div class="particle particle-3"></div>
-                            <div class="particle particle-4"></div>
-                            <div class="particle particle-5"></div>
-                            <div class="particle particle-6"></div>
-                        </div>
-                        <div class="geometric-shapes">
-                            <div class="shape shape-circle"></div>
-                            <div class="shape shape-triangle"></div>
-                            <div class="shape shape-square"></div>
-                            <div class="shape shape-hexagon"></div>
-                        </div>
-                        <div class="central-orb">
-                            <div class="orb-core"></div>
-                            <div class="orb-ring ring-1"></div>
-                            <div class="orb-ring ring-2"></div>
-                            <div class="orb-ring ring-3"></div>
-                        </div>
-                        <div class="floating-dots">
-                            <div class="dot dot-1"></div>
-                            <div class="dot dot-2"></div>
-                            <div class="dot dot-3"></div>
-                            <div class="dot dot-4"></div>
-                            <div class="dot dot-5"></div>
-                        </div>
+                    <div class="coder-anim" aria-hidden="true">
+                        <svg class="coder-svg" width="360" height="300" viewBox="0 0 360 300" xmlns="http://www.w3.org/2000/svg" role="img">
+                            <title>Computer with code on screen</title>
+                            <!-- Desk -->
+                            <rect x="40" y="190" width="280" height="16" rx="6" fill="#0b1224" stroke="#1f2937"/>
+                            <!-- Monitor body -->
+                            <rect x="90" y="80" width="180" height="100" rx="12" fill="#0b1224" stroke="#1f2937"/>
+                            <!-- Screen area -->
+                            <rect x="100" y="90" width="160" height="80" rx="8" fill="#0f1a33"/>
+                            <!-- Screen glow -->
+                            <rect class="screen-glow" x="100" y="90" width="160" height="80" rx="8" fill="#38BDF8" opacity="0.08"/>
+                            <!-- Stand -->
+                            <rect x="178" y="180" width="14" height="12" rx="3" fill="#1f2937"/>
+                            <rect x="150" y="192" width="70" height="6" rx="3" fill="#1f2937"/>
+                            <!-- Keyboard -->
+                            <rect x="120" y="206" width="120" height="8" rx="4" fill="#0b1224" stroke="#1f2937"/>
+                            <!-- Code lines -->
+                            <rect class="code-line" x="110" y="98" width="120" height="6" rx="3" fill="#38BDF8" opacity="0.85"/>
+                            <rect class="code-line dl2" x="110" y="108" width="90" height="6" rx="3" fill="#93c5fd" opacity="0.7"/>
+                            <rect class="code-line dl3" x="110" y="118" width="130" height="6" rx="3" fill="#E5E7EB" opacity="0.8"/>
+                            <rect class="code-line dl4" x="110" y="128" width="75" height="6" rx="3" fill="#38BDF8" opacity="0.85"/>
+                            <rect class="code-line dl5" x="110" y="138" width="110" height="6" rx="3" fill="#93c5fd" opacity="0.7"/>
+                            <rect class="code-line dl6" x="110" y="148" width="95" height="6" rx="3" fill="#E5E7EB" opacity="0.8"/>
+                            <!-- Cursor -->
+                            <rect class="cursor" x="112" y="148" width="10" height="2" fill="#E5E7EB"/>
+                        </svg>
                     </div>
                 </div>
             </div>
@@ -132,45 +130,7 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">My Services</h2>
-                <p class="section-subtitle">What I can do for you</p>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Web Development</h3>
-                    <p>Creating responsive and modern websites using latest technologies</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                    <h3>Mobile Apps</h3>
-                    <p>Building cross-platform mobile applications for iOS and Android</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>Machine Learning</h3>
-                    <p>Developing AI solutions and data analysis applications</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <h3>Backend Development</h3>
-                    <p>Creating robust APIs and database management systems</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
@@ -179,44 +139,26 @@
                 <h2 class="section-title">My Projects</h2>
                 <p class="section-subtitle">Here are a few projects I've worked on recently.</p>
             </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-illustration project-1">
-                            <div class="medical-icon"></div>
-                        </div>
+            <ul class="projects-list">
+                <li>
+                    <div class="project-row">
+                        <h3 class="project-title">Blood Management System</h3>
+                        <p class="project-desc">Web app to manage donor records, blood inventory, and hospital requests for faster, reliable responses. Tech: HTML, CSS, JS.</p>
                     </div>
-                    <div class="project-content">
-                        <h3>Blood Management System</h3>
-                        <p>A brief description of what this project is, the technologies used, and what problem it solves.</p>
-                        <a href="#" class="btn btn-primary">View Project</a>
+                </li>
+                <li>
+                    <div class="project-row">
+                        <h3 class="project-title">Online Voting System</h3>
+                        <p class="project-desc">Secure, role-based voting with basic audit logging and a clear workflow. Tech: HTML, CSS, JS.</p>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-illustration project-2">
-                            <div class="vote-icon"></div>
-                        </div>
+                </li>
+                <li>
+                    <div class="project-row">
+                        <h3 class="project-title">Art Gallery</h3>
+                        <p class="project-desc">Responsive gallery that showcases artwork with a clean, modern UI and smooth navigation. Tech: HTML, CSS, JS.</p>
                     </div>
-                    <div class="project-content">
-                        <h3>Online Voting System</h3>
-                        <p>This project showcases some advanced features like animation, APIs, or user authentication.</p>
-                        <a href="#" class="btn btn-primary">View Project</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-illustration project-3">
-                            <div class="art-icon"></div>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Art Gallery</h3>
-                        <p>A responsive layout with a beautiful user interface and modern design principles.</p>
-                        <a href="#" class="btn btn-primary">View Project</a>
-                    </div>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -261,7 +203,12 @@
                 <div class="social-links">
                     <a href="https://github.com/Bhorkade" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="https://www.linkedin.com/in/shrikar-bhorkade-81248b302" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://twitter.com/yourhandle" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://leetcode.com/u/Shrikar_15/" target="_blank" title="LeetCode" aria-label="LeetCode">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M14.3 3.2a1 1 0 011.4.1l3 3.3a1 1 0 01-.05 1.4l-1.06 1.02a1 1 0 01-1.41-.03l-1.9-2.02-6.3 6.28 3.3 3.5a3.7 3.7 0 105.23 5.23 3.7 3.7 0 00-4.7-5.72l-3.59-3.82a1 1 0 010-1.38l7.03-7.02z" fill="#E5E7EB"/>
+                            <path d="M16.5 18.3a1.7 1.7 0 11-3.4 0 1.7 1.7 0 013.4 0z" fill="#38BDF8"/>
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>

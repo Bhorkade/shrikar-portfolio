@@ -31,10 +31,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(138, 43, 226, 0.98)';
+        navbar.style.background = 'rgba(15, 23, 42, 0.98)';
         navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
     } else {
-        navbar.style.background = 'rgba(138, 43, 226, 0.95)';
+        navbar.style.background = 'rgba(15, 23, 42, 0.95)';
         navbar.style.boxShadow = 'none';
     }
 });
@@ -56,7 +56,7 @@ const observer = new IntersectionObserver((entries) => {
 
 // Observe elements for animation
 document.addEventListener('DOMContentLoaded', () => {
-    const animateElements = document.querySelectorAll('.service-card, .project-card, .about-content');
+    const animateElements = document.querySelectorAll('.about-content, .project-row, .contact-form, .section-header');
     
     animateElements.forEach(el => {
         el.style.opacity = '0';
@@ -64,6 +64,22 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.transition = 'all 0.6s ease';
         observer.observe(el);
     });
+
+    // Preview mode toggle (Desktop/Mobile) - emulated mobile class on body
+    const previewContainer = document.querySelector('.preview-toggle');
+    if (previewContainer) {
+        const desktopBtn = previewContainer.querySelector('.preview-desktop');
+        const mobileBtn = previewContainer.querySelector('.preview-mobile');
+        const setMode = (mode) => {
+            document.body.classList.toggle('emulate-mobile', mode === 'mobile');
+            desktopBtn.classList.toggle('active', mode === 'desktop');
+            mobileBtn.classList.toggle('active', mode === 'mobile');
+        };
+        if (desktopBtn && mobileBtn) {
+            desktopBtn.addEventListener('click', () => setMode('desktop'));
+            mobileBtn.addEventListener('click', () => setMode('mobile'));
+        }
+    }
 });
 
 // Typing animation for home section
@@ -237,7 +253,7 @@ function showNotification(message, type = 'info') {
         position: fixed;
         top: 100px;
         right: 20px;
-        background: ${type === 'success' ? '#27ae60' : '#3498db'};
+        background: ${type === 'success' ? '#27ae60' : '#38BDF8'};
         color: white;
         padding: 1rem 1.5rem;
         border-radius: 10px;
@@ -379,12 +395,12 @@ window.addEventListener('load', () => {
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: #0F172A;
         display: flex;
         align-items: center;
         justify-content: center;
         z-index: 10000;
-        color: white;
+        color: #E5E7EB;
         font-family: 'Poppins', sans-serif;
         opacity: 1;
         transition: opacity 0.5s ease;
@@ -434,7 +450,7 @@ progressBar.style.cssText = `
     left: 0;
     width: 0%;
     height: 3px;
-    background: linear-gradient(90deg, #ffd700, #ff6b6b);
+    background: #38BDF8;
     z-index: 1000;
     transition: width 0.1s ease;
 `;
@@ -473,7 +489,7 @@ window.addEventListener('scroll', () => {
 const navStyle = document.createElement('style');
 navStyle.textContent = `
     .nav-link.active {
-        color: #ffd700 !important;
+        color: #38BDF8 !important;
     }
     
     .nav-link.active::after {
